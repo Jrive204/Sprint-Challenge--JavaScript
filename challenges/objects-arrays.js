@@ -51,7 +51,7 @@ console.log(dino1.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWRSERARARWERSARARARRRR!" Log the result.
-dino1.roar = function(){ return `RAWRSERARARWERSARARARRRR` }
+dino1.roar = () =>`RAWRSERARARWERSARARARRRR`;
 console.log(dino1.roar());
 
 
@@ -82,7 +82,7 @@ Once you have the new array created, sort the universities alphabetically and lo
 // return universities.sort();
 // }
 
-const school = function(arr){
+const school = (arr) => {
   let grad = [];
 for (let i = 0; i < arr.length; i++){
 grad.push(arr[i].university)
@@ -159,9 +159,8 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 */
 
 // const lowCaseAnimalNames = [];
-const lowCaseAnimalNames = zooAnimals.map(function(item){
-  return item.animal_name.toLowerCase();
-})
+const lowCaseAnimalNames = zooAnimals.map((item) => {
+  return item.animal_name.toLowerCase();})
 console.log(lowCaseAnimalNames);
 
 
@@ -172,9 +171,8 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 */
 // const lowPopulationAnimals = [];
-const lowPopulationAnimals = zooAnimals.filter(function(item){
-  return item.population < 5;
-})
+const lowPopulationAnimals = zooAnimals.filter((item) => {
+  return item.population < 5})
 
 console.log(lowPopulationAnimals);
 
@@ -183,7 +181,7 @@ console.log(lowPopulationAnimals);
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-const populationTotal = zooAnimals.reduce(function(totalAnimals, item){
+const populationTotal = zooAnimals.reduce((totalAnimals, item) => {
   return totalAnimals + item.population;
 }, 0);
     
