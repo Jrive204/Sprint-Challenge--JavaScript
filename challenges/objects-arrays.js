@@ -76,23 +76,15 @@ const graduates = [
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
 
-// let universities = [];
-// for (let i = 0; i < graduates.length; i++){
-// universities.push(graduates[i].university)
-// return universities.sort();
-// }
+let universities = [];
 
-const school = (arr) => {
-  let grad = [];
-for (let i = 0; i < arr.length; i++){
-grad.push(arr[i].university)
-
+for (let i = 0; i < graduates.length; i++){
+  universities.push(graduates[i].university);
+  universities.sort ();
 }
-return grad.sort();
-};
 
 
-console.log(school(graduates));
+console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
 
@@ -113,11 +105,12 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
-for (let i = 0; i < graduates.length; i++) {
-  if (graduates[i].university === "Uni") {
-    unisWithUni.push(graduates[i]);
+for (let i = 0; i < universities.length; i++) {
+  if (universities[i].match(/uni/gi)){
+    unisWithUni.push(universities[i]);
   }
 }
+
 
 
 console.log(unisWithUni);
