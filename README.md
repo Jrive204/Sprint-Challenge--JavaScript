@@ -37,8 +37,9 @@ ForEach changes the original array, Map() creates a new array that doesn't affec
 A function can be passed parameters to operate on, and can return data if it is asked to inside the function. Data inside the function stays within that closure unless desginated to return outside of it. A method is a piece of code that is called by a name that is associated with an object, it it identical to a function except a method is implcitly passed by the object that calls it, and a method is able to operate within a class. 
 
 3. What is closure?
--- will clarify later
-Closure is a combination of a function object and its scope. 
+
+Closure is the capability for a function to remember and access its lexical scope even when the function is executing outside that lexical scope.
+
 
 4. Describe the four rules of the 'this' keyword.
 

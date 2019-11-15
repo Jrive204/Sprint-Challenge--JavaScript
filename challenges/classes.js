@@ -17,9 +17,6 @@ class CuboidMaker {
     }
 
 
-
-
-
   };
   
   const cuboid =  new CuboidMaker({
