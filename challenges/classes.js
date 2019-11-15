@@ -18,6 +18,8 @@ class CuboidMaker {
 
 
   };
+
+
   
   const cuboid =  new CuboidMaker({
       'length': 4,
@@ -35,6 +37,25 @@ console.log(cuboid.surfaceArea()); // 130
 class CubeMaker extends CuboidMaker{
     constructor(attr){
         super(attr);
+        this.length = attr.length;
+        this.width = attr.width;
+        this.height = attr.height;
 
     }
-}
+    cubeVolume(){
+        return (this.length) ** 3
+      }
+      cubeSurface(){
+        return 6 * (this.length) ** 2;
+      }
+     
+};
+
+const cube =  new CubeMaker({
+    'length': 4,
+    'width': 5,
+    'height': 5,
+  });
+
+  console.log(cube.cubeVolume());
+  console.log(cube.cubeSurface());
